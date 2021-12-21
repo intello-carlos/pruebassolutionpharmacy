@@ -49,7 +49,6 @@
                 <field name="expiration_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
                 <field name="pharmaceutical_form"/>
                 <field name="subtotal_grams"/>
-                <field name="line_production_id"/>
               </group>
             </group>
             <notebook>

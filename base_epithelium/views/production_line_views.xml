@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Form view for production line -->
+        <record id="production_line_view_form" model="ir.ui.view">
+            <field name="name">production_line_view_form</field>
+            <field name="model">production.lines</field>
+            <field name="arch" type="xml">
+                <form string="production_line_form">
+                    <sheet>
+                        <group>
+                            <group col="1">
+                                <field name="name"/>
+                                <field name="code"/>
+                                <field name="check_status"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree view for production line -->
+        <record id="production_line_view_tree" model="ir.ui.view">
+            <field name="name">production_line_view_tree</field>
+            <field name="model">production.lines</field>
+            <field name="arch" type="xml">
+                <tree string="production_line_tree">
+                    <field name="name" width="30%"/>
+                    <field name="code" width="30%"/>
+                    <field name="check_status" width="30%"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for production line -->
+        <record id="production_lines_action" model="ir.actions.act_window">
+            <field name="name">Production Lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">production.lines</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="menu_item_production_line"
+                  name="Production Lines"
+                  parent="mrp.menu_mrp_configuration"
+                  action="production_lines_action"
+                  sequence="10"/>
+    </data>
+</odoo>

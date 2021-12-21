@@ -1,0 +1,1253 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_epithelium
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-16 20:14+0000\n"
+"PO-Revision-Date: 2021-11-16 20:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_epithelium
+#: model:ir.actions.report,print_report_name:base_epithelium.action_report_production_order
+msgid "'Production Order - %s' % object.name"
+msgstr "'Orden de Producción - %s' % object.name"
+
+#. module: base_epithelium
+#: model:ir.actions.report,print_report_name:base_epithelium.action_report_quality_label
+msgid "'Quality Label - %s' % object.name"
+msgstr "'Rotulo de calidad - %s' % object.name"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium
+msgid "<b>PURCHASE ORDER FORM</b>"
+msgstr ""
+"<b>FORMATO ORDEN DE COMPRA</b>\n"
+"                        <br/>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium_solicitud
+msgid "<b>REQUEST FOR QUOTATION FORM</b>"
+msgstr "<b>FORMULARIO DE SOLICITUD DE COTIZACION</b>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<br/>\n"
+"                                <strong>Due Date:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Fecha de Vencimiento:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<br/>\n"
+"                                <strong>Finished Product:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Producto:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<br/>\n"
+"                                <strong>Issued:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Emitido:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<br/>\n"
+"                                <strong>Patient:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Paciente:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<br/>\n"
+"                                <strong>Pharmaceutical Form:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Forma Farmacéutica:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<br/>\n"
+"                                <strong>Presentation:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Presentación:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<br/>\n"
+"                                <strong>Size:</strong>"
+msgstr ""
+"<br/>\n"
+"                                <strong>Tamaño:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_quality_label
+msgid ""
+"<span class=\"list-inline-item\"><span class=\"page\"/></span>\n"
+"                                            <span class=\"list-inline-item\">de</span>\n"
+"                                            <span class=\"list-inline-item\"><span class=\"topage\"/></span>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_ephi
+msgid ""
+"<span class=\"list-inline-item\"><span class=\"page\"/></span>\n"
+"                                        <span class=\"list-inline-item\">de</span>\n"
+"                                        <span class=\"list-inline-item\"><span class=\"topage\"/></span>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium_solicitud
+msgid ""
+"<span class=\"list-inline-item\"><span class=\"page\"/></span>\n"
+"                                    <span class=\"list-inline-item\">de</span>\n"
+"                                    <span class=\"list-inline-item\"><span class=\"topage\"/></span>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span style=\"color: green;\">APPROVED</span>"
+msgstr "<span style=\"color: green;\">APROBADO</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span style=\"color: red;\">REJECTED</span>"
+msgstr "<span style=\"color: red;\">RECHAZADO</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span style=\"color: yellow;\">QUARANTINE</span>"
+msgstr "<span style=\"color: yellow;\">CUARENTENA</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_quality_label
+msgid ""
+"<span>\n"
+"                                    <strong>\n"
+"                                        IDENTIFICATION LABEL FORMAT\n"
+"                                    </strong>\n"
+"                                </span>"
+msgstr ""
+"<span>\n"
+"                                    <strong>\n"
+"                                        FORMATO RÓTULO DE IDENTIFICACIÓN\n"
+"                                    </strong>\n"
+"                                </span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_ephi
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_quality_label
+msgid "<span>20.01.20</span>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium_solicitud
+msgid "<span>27.09.16</span>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium_solicitud
+msgid "<span>Approved</span>"
+msgstr "<span>Aprobado</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_ephi
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_quality_label
+msgid "<span>Aprobado</span>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span>D. ANALYSIS</span>"
+msgstr "<span>F. ANÁLISIS</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span>DESCRIPTION</span>"
+msgstr "<span>DESCRIPCIÓN</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span>EXPIRATION DATE</span>"
+msgstr "<span>F. VENCIMIENTO</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span>INCOME DATE<br/>/ REPACK DATE</span>"
+msgstr "<span>F. INGRESO<br/>/ F. RE-ENVASE</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span>MANUFACTURER<br/> BATCH NO.</span>"
+msgstr "<span>NO LOTE<br/> FABRICANTE.</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span>ORIGINAL </span>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium_solicitud
+msgid ""
+"<span>Observations: Please provide a certificate of analysis or technical data sheet and a safety\n"
+"                    certificate for each one.\n"
+"                    of the requested raw materials.</span>"
+msgstr ""
+"<span>Observaciones: Entregar certificado de análisis o ficha técnica y certificado de seguridad de cada una\n"
+"de las materias primas solicitadas.</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span>PROVIDER</span>"
+msgstr "<span>PROVEEDOR</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span>QUANTITY</span>"
+msgstr "<span>CANTIDAD</span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.quality_label
+msgid "<span>RE-PACKAGING </span>"
+msgstr "<span>RE-ENVASE </span>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong style=\"font-size: 9pt;\">Client:</strong>"
+msgstr "<strong style=\"font-size: 9pt;\">Cliente:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong style=\"font-size: 9pt;\">Production Order:</strong>"
+msgstr "<strong style=\"font-size: 9pt;\">Orden de Producción:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<strong style=\"padding-left: 10pt;\">\n"
+"                                                _______________________________</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<strong>\n"
+"                                                _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<strong>\n"
+"                                            _________________________________________</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid ""
+"<strong>\n"
+"                                            _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid ""
+"<strong>\n"
+"                                    Address:</strong>"
+msgstr "<strong>Dirección:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid ""
+"<strong>\n"
+"                                    City:</strong>"
+msgstr "<strong>Ciudad:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid ""
+"<strong>\n"
+"                                    Country:</strong>"
+msgstr "<strong>País:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid ""
+"<strong>\n"
+"                                    Phone:</strong>"
+msgstr "<strong>Teléfono:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid ""
+"<strong>\n"
+"                                    State:</strong>"
+msgstr "<strong>Departamento:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Amount</strong>"
+msgstr "<strong>Monto</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Aspectos</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Conditioning</strong>"
+msgstr "<strong>Acondicionamiento</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Fecha:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium_solicitud
+msgid "<strong>Date</strong>"
+msgstr "<strong>Fecha:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Deliver to:</strong>"
+msgstr "<strong>Entregar a:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Description</strong>"
+msgstr "<strong>Descripción</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Dispensing</strong>"
+msgstr "<strong>Dispensación</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Elaborated</strong>"
+msgstr "<strong>Elaboro</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Elaboration</strong>"
+msgstr "<strong>Elaboración</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_ephi
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_quality_label
+msgid "<strong>Estado</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_quality_label
+msgid "<strong>FTO-COC-010-2</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium_solicitud
+msgid "<strong>FTO-COM-002-3</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_ephi
+msgid "<strong>FTO-PRO-011-2</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_ephi
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_quality_label
+msgid "<strong>Fecha</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Number of units obtained</strong>"
+msgstr "<strong>Numero de unidades obtenidas</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Order Date:</strong>"
+msgstr "<strong>Fecha de la Orden:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>PROCESS CONTROL</strong>"
+msgstr "<strong>CONTROL DE PROCESOS</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>PROCESS: According to production procedure</strong>"
+msgstr "<strong>PROCEDIMIENTO: Según procedimiento de elaboración</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Package</strong>"
+msgstr "<strong>Envaso</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Packing</strong>"
+msgstr "<strong>Envasado</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium_solicitud
+msgid "<strong>Page</strong>"
+msgstr "<strong>Página</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid ""
+"<strong>Phone:\n"
+"                                    to</strong>"
+msgstr "<strong>Telefono:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Planned Date:</strong>"
+msgstr "<strong>Fecha Fabricación:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Provider name:</strong>"
+msgstr "<strong>Nombre Proveedor:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_ephi
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_quality_label
+msgid "<strong>Página</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Qty</strong>"
+msgstr "<strong>Cantidad</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium_solicitud
+msgid "<strong>State</strong>"
+msgstr "<strong>Estado</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Subtotal</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Total Taxes</strong>"
+msgstr "Total Impuestos"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>Precio Unitario</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>VAT:</strong>"
+msgstr "<strong>NIT:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Verify Production Manager</strong>"
+msgstr "<strong>Verificó Jefe de Producción</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Vo Bo Technical Director</strong>"
+msgstr "<strong>Vo Bo Director Técnico</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid ""
+"<strong>Warehouse\n"
+"                                    that\n"
+"                                    receives:</strong>"
+msgstr "<strong>Bodega que recibe:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid ""
+"<strong>Way to\n"
+"                                    Pay:</strong>"
+msgstr "<strong>Forma de Pago:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>Yield</strong>"
+msgstr "<strong>Rendimiento</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "<strong>Your Order Reference:</strong>"
+msgstr "<strong>Orden de Referencia:</strong>"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "<strong>pH</strong>"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.view_mrp_production_plan
+msgid "Activity"
+msgstr "Actividad"
+
+#. module: base_epithelium
+#: code:addons/base_epithelium/models/mrp_production.py:0
+#: code:addons/base_epithelium/models/mrp_production.py:0
+#, python-format
+msgid "Activity to Manufacturing"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom_line__affect_bill_materials
+#: model:ir.model.fields,field_description:base_epithelium.field_product_product__affect_bill_materials
+#: model:ir.model.fields,field_description:base_epithelium.field_product_template__affect_bill_materials
+msgid "Affects bill of materials"
+msgstr "Afecta a lista de materiales"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Lista de materiales"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr "Línea de Lista de Materiales"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.view_mrp_production_plan
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+msgid "Cancelled Purchase Order No."
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom_line__check_change_terms
+msgid "Check Change Terms"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_account_move__check_status
+#: model:ir.model.fields,field_description:base_epithelium.field_account_move_line__check_status
+msgid "Check Status"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_product_product__check_status_categ
+#: model:ir.model.fields,field_description:base_epithelium.field_product_template__check_status_categ
+msgid "Check product categ"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_product_product__check_status_group
+#: model:ir.model.fields,field_description:base_epithelium.field_product_template__check_status_group
+msgid "Check product group"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_form__code
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_presentation__code
+#: model:ir.model.fields,field_description:base_epithelium.field_production_lines__code
+msgid "Code"
+msgstr "Código"
+
+#. module: base_epithelium
+#: model:ir.model.fields,help:base_epithelium.field_res_config_settings__check_status
+#: model_terms:ir.ui.view,arch_db:base_epithelium.res_config_settings_base_epithelium_view_form
+msgid "Company localization control"
+msgstr "Control de localización de empresas"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "Composition"
+msgstr "Composición"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_form__name
+msgid "Compound"
+msgstr "Compuesto"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de Configuración"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.view_mrp_production_plan
+msgid "Create Activity"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.actions.act_window,name:base_epithelium.action_mrp_production_plan
+msgid "Create Task"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__create_uid
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_form__create_uid
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_presentation__create_uid
+#: model:ir.model.fields,field_description:base_epithelium.field_production_lines__create_uid
+#: model:ir.model.fields,field_description:base_epithelium.field_wizard_mrp_production__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__create_date
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_form__create_date
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_presentation__create_date
+#: model:ir.model.fields,field_description:base_epithelium.field_production_lines__create_date
+#: model:ir.model.fields,field_description:base_epithelium.field_wizard_mrp_production__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_res_config_settings__days_to_expiration
+#: model_terms:ir.ui.view,arch_db:base_epithelium.inherit_res_config_settings_mrp
+msgid "Days to Expiration"
+msgstr "Días de Vencimiento"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.inherit_res_config_settings_mrp
+msgid "Days to expiration in non-standard manufacturing"
+msgstr "Días de vencimiento en la fabricación no estándar"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__display_name
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_form__display_name
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_presentation__display_name
+#: model:ir.model.fields,field_description:base_epithelium.field_production_lines__display_name
+#: model:ir.model.fields,field_description:base_epithelium.field_scss_editor_epithelium__display_name
+#: model:ir.model.fields,field_description:base_epithelium.field_wizard_mrp_production__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom__dough
+#: model:ir.model.fields,field_description:base_epithelium.field_product_product__dough
+#: model:ir.model.fields,field_description:base_epithelium.field_product_template__dough
+msgid "Dough"
+msgstr "Unidad de medida"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__due_date
+#: model:ir.model.fields,field_description:base_epithelium.field_stock_move_line__due_date
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "Due Date"
+msgstr "Fecha de vencimiento"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production__due_date
+#: model:ir.model.fields,field_description:base_epithelium.field_stock_move__due_date
+msgid "Due date"
+msgstr "Fecha de vencimiento"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom_line__percent
+msgid "Float"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__id
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_form__id
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_presentation__id
+#: model:ir.model.fields,field_description:base_epithelium.field_production_lines__id
+#: model:ir.model.fields,field_description:base_epithelium.field_scss_editor_epithelium__id
+#: model:ir.model.fields,field_description:base_epithelium.field_wizard_mrp_production__id
+msgid "ID"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.inherit_res_config_settings_mrp
+msgid "Invima"
+msgstr ""
+
+#. module: base_epithelium
+#: code:addons/base_epithelium/models/stock_quant.py:0
+#, python-format
+msgid ""
+"It is not possible to reserve more products of %s than you have in stock."
+msgstr ""
+"No es posible reservar más productos que los %s que tiene en existencias."
+
+#. module: base_epithelium
+#: code:addons/base_epithelium/models/stock_quant.py:0
+#, python-format
+msgid ""
+"It is not possible to unreserve more products of %s than you have in stock."
+msgstr ""
+"No es posible deshacer la reserva de más productos que los %s que tiene en "
+"existencias."
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_account_move
+msgid "Journal Entries"
+msgstr "Asientos contables"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot____last_update
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_form____last_update
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_presentation____last_update
+#: model:ir.model.fields,field_description:base_epithelium.field_production_lines____last_update
+#: model:ir.model.fields,field_description:base_epithelium.field_scss_editor_epithelium____last_update
+#: model:ir.model.fields,field_description:base_epithelium.field_wizard_mrp_production____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__write_uid
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_form__write_uid
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_presentation__write_uid
+#: model:ir.model.fields,field_description:base_epithelium.field_production_lines__write_uid
+#: model:ir.model.fields,field_description:base_epithelium.field_wizard_mrp_production__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__write_date
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_form__write_date
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_presentation__write_date
+#: model:ir.model.fields,field_description:base_epithelium.field_production_lines__write_date
+#: model:ir.model.fields,field_description:base_epithelium.field_wizard_mrp_production__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_res_config_settings__check_status
+msgid "Localization"
+msgstr "Localización"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.external_layout_epithelium_solicitud
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_ephi
+#: model_terms:ir.ui.view,arch_db:base_epithelium.internal_layout_quality_label
+msgid "Logo"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__lot
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "Lot"
+msgstr "Lote"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "Lot Quantity"
+msgstr "Cantidad del Lote"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production__lot_stock_move_line_ids
+msgid "Lot Stock Move Line"
+msgstr "Lineas lotes"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.mrp_production_form_view_base_epithelium
+msgid "Lots"
+msgstr "Lotes"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_wizard_mrp_production__message
+msgid "Message"
+msgstr "Mensaje"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_pharmaceutical_form
+msgid "Model that stores the dosage form"
+msgstr "Modelo que almacena la forma farmacéutica"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_pharmaceutical_presentation
+msgid "Model that stores the type of presentation of a product"
+msgstr "Modelo que almacena el tipo de presentación de un producto"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_mrp_production_simulation_lot
+msgid "Model to store the simulation of batch consumption"
+msgstr "Modelo que almacena el tipo de presentación de un producto"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_production_lines
+msgid "Modelo para almacenar las lineas de producción"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production__mrp_production_simulation_lot_ids
+msgid "Mrp Production Simulation Lot"
+msgstr "Simulación de producción en los lotes"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_production_lines__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: base_epithelium
+#: code:addons/base_epithelium/models/mrp_production.py:0
+#: code:addons/base_epithelium/models/mrp_production.py:0
+#: code:addons/base_epithelium/models/sale_order.py:0
+#: code:addons/base_epithelium/models/sale_order.py:0
+#: code:addons/base_epithelium/models/sale_order.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__order_id
+msgid "Order"
+msgstr "Orden"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production__partner_id
+msgid "Partner"
+msgstr "Cliente"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production__patient
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_stock_move__percent
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "Percent"
+msgstr "Porcentaje"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom__percent_total
+msgid "Percent Total"
+msgstr "Porcentaje Total"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.product_template_pharmaceutical_view
+msgid "Pharmaceutical"
+msgstr "Farmacéutica"
+
+#. module: base_epithelium
+#: model:ir.actions.act_window,name:base_epithelium.pharmaceutical_form_action
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom__pharmaceutical_form
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production__pharmaceutical_form
+#: model:ir.model.fields,field_description:base_epithelium.field_product_product__pharmaceutical_form
+#: model:ir.model.fields,field_description:base_epithelium.field_product_template__pharmaceutical_form
+#: model:ir.ui.menu,name:base_epithelium.pharmaceutical_form_menu
+msgid "Pharmaceutical form"
+msgstr "Forma farmacéutica"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.pharmaceutical_form_tree
+msgid "Pharmaceutical form Tree"
+msgstr "Tabla forma farmacéutica"
+
+#. module: base_epithelium
+#: model:ir.actions.act_window,name:base_epithelium.pharmaceutical_presentation_action
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom__pharmaceutical_presentation
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production__pharmaceutical_presentation
+#: model:ir.model.fields,field_description:base_epithelium.field_product_product__pharmaceutical_presentation
+#: model:ir.model.fields,field_description:base_epithelium.field_product_template__pharmaceutical_presentation
+#: model:ir.ui.menu,name:base_epithelium.pharmaceutical_presentation_menu
+#: model_terms:ir.ui.view,arch_db:base_epithelium.pharmaceutical_presentation_form
+msgid "Pharmaceutical presentation"
+msgstr "Presentación farmacéutica"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.pharmaceutical_presentation_tree
+msgid "Pharmaceutical presentation Tree"
+msgstr "Tabla presentación farmacéutica"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.product_template_pharmaceutical_view
+msgid "Pharmaceutical product"
+msgstr "Producto farmacéutico"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.pharmaceutical_form_form
+msgid "Pharmceutical form"
+msgstr "Forma farmacéutica"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Tipo de Nota de Entrega"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.mrp_production_form_view_base_epithelium
+msgid "Plan"
+msgstr ""
+
+#. module: base_epithelium
+#: code:addons/base_epithelium/models/mrp_production.py:0
+#, python-format
+msgid "Please create a picking type first"
+msgstr ""
+
+#. module: base_epithelium
+#: code:addons/base_epithelium/models/sale_order.py:0
+#, python-format
+msgid "Please define an accounting sales journal for the company %s (%s)."
+msgstr "Defina un diario de ventas contables para la empresa. %s (%s)."
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_pharmaceutical_presentation__name
+msgid "Presentation"
+msgstr "Presentación"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_product_product
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_product_category
+msgid "Product Category"
+msgstr "Categoría del Producto"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de Producto (Stock Move Line)"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_product_template
+msgid "Product Template"
+msgstr "Plantilla del Producto"
+
+#. module: base_epithelium
+#: model:ir.actions.act_window,name:base_epithelium.production_lines_action
+#: model:ir.ui.menu,name:base_epithelium.menu_item_production_line
+msgid "Production Lines"
+msgstr "Lineas de Producción"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_mrp_production
+msgid "Production Order"
+msgstr "Orden de producción"
+
+#. module: base_epithelium
+#: model:ir.actions.report,name:base_epithelium.action_report_production_order
+msgid "Production Order Ep"
+msgstr "Orden de Producción Ep"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_account_move__production_line_id
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom__production_line_id
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production__production_line_id
+#: model:ir.model.fields,field_description:base_epithelium.field_sale_order__production_line_id
+msgid "Production line"
+msgstr "Linea de producción"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_product_group
+msgid "Products Group"
+msgstr "Grupos del producto"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_purchase_order
+msgid "Purchase Order"
+msgstr "Orden de Compra"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Línea de Orden de Compra"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+msgid "Purchase Order No."
+msgstr "Orden de Compra No."
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_quality_alert
+msgid "Quality Alert"
+msgstr "Alerta de Calidad"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_quality_alert_team
+msgid "Quality Alert Team"
+msgstr "Equipo de alertas de calidad"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_quality_check
+msgid "Quality Check"
+msgstr "Control de calidad"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_quality_point
+msgid "Quality Control Point"
+msgstr "Punto de Control de Calidad"
+
+#. module: base_epithelium
+#: model:ir.actions.report,name:base_epithelium.action_report_quality_label
+msgid "Quality Label"
+msgstr "Rótulo de calidad"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production_simulation_lot__quantity
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: base_epithelium
+#: code:addons/base_epithelium/models/mrp_bom.py:0
+#, python-format
+msgid "Quantity must be greater than zero"
+msgstr "La cantidad debe ser mayor que cero"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_stock_quant
+msgid "Quants"
+msgstr "Cants"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "Request for Quotation No."
+msgstr "Solicitud de cotización No."
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.mrp_production_form_view_base_epithelium
+msgid "Reserved"
+msgstr "Invertida"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_sale_order_option
+msgid "Sale Options"
+msgstr "Opciones de venta"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Factura de Ventas de Pago Anticipado"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de Venta"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+"#-#-#-#-#  es_CO.po (Odoo 9.0)  #-#-#-#-#\n"
+"Línea Orden de Venta\n"
+"#-#-#-#-#  es_CO.po (Odoo 9.0)  #-#-#-#-#\n"
+"Línea de Pedido de Venta"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_account_move__invoice_user_id
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_mrp_production_schedule
+msgid "Schedule the production of Product in a warehouse"
+msgstr "Programe la producción del Producto en un almacén."
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_scss_editor_epithelium
+msgid "Scss Editor"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom__size
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production__size
+#: model:ir.model.fields,field_description:base_epithelium.field_product_product__size
+#: model:ir.model.fields,field_description:base_epithelium.field_product_template__size
+#: model_terms:ir.ui.view,arch_db:base_epithelium.mrp_bom_form_view_base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.product_template_pharmaceutical_view
+msgid "Size"
+msgstr "Tamaño"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom__size_total
+msgid "Size total"
+msgstr "Tamaño total"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom__standard_manufacturing
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_production__check_standard_manufacturing
+#: model:ir.model.fields,field_description:base_epithelium.field_product_product__standard_manufacturing
+#: model:ir.model.fields,field_description:base_epithelium.field_product_template__standard_manufacturing
+msgid "Standard manufacturing"
+msgstr "Fabricación estandar"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_mrp_bom__status_percent
+msgid "Status Percent"
+msgstr "Estado del porcentaje"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de Existencias"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_purchasequotation_document
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: base_epithelium
+#: code:addons/base_epithelium/models/purchase.py:0
+#, python-format
+msgid "The sequence not exist"
+msgstr "La secuencia no existe"
+
+#. module: base_epithelium
+#: model:ir.model.fields.selection,name:base_epithelium.selection__mrp_bom__status_percent__1
+msgid "The total percentage is the ideal"
+msgstr "El porcentaje total es el ideal"
+
+#. module: base_epithelium
+#: model:ir.model.fields,help:base_epithelium.field_stock_move_line__due_date
+msgid ""
+"This is the date on which the goods with this Serial Number may become "
+"dangerous and must not be consumed."
+msgstr ""
+"Esta es la fecha en la que los productos con este número de serie pueden "
+"volverse peligrosos y no deben consumirse."
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_stock_move__total
+msgid "Total"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields.selection,name:base_epithelium.selection__mrp_bom__status_percent__0
+msgid "Total percentage is below 100"
+msgstr "El porcentaje total es inferior a 100"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "Total units"
+msgstr "Total de Unidades"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "Totals"
+msgstr "Total"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_mrp_unbuild
+msgid "Unbuild Order"
+msgstr "örden de desconstrucción"
+
+#. module: base_epithelium
+#: model:ir.model.fields,field_description:base_epithelium.field_wizard_mrp_production__users_ids
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.report_mrporder_ep
+msgid "Weigh Quantity"
+msgstr "Cantidad Pesada"
+
+#. module: base_epithelium
+#: model:ir.model.fields.selection,name:base_epithelium.selection__mrp_bom_line__check_change_terms__none
+msgid "none"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields.selection,name:base_epithelium.selection__mrp_bom_line__check_change_terms__percent
+msgid "percent"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model.fields.selection,name:base_epithelium.selection__mrp_bom_line__check_change_terms__product_qty
+msgid "product qty"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.production_line_view_form
+msgid "production_line_form"
+msgstr ""
+
+#. module: base_epithelium
+#: model_terms:ir.ui.view,arch_db:base_epithelium.production_line_view_tree
+msgid "production_line_tree"
+msgstr ""
+
+#. module: base_epithelium
+#: model:ir.model,name:base_epithelium.model_wizard_mrp_production
+msgid "wizard.mrp.production"
+msgstr ""

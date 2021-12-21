@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Grams pharmaceutical form-->
+         <record id="base_solution_quotator_product" model="ir.ui.view">
+            <field name="name">mrp.production.quotator.product</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page/field[@name='order_line']/tree/field[@name='product_id']" position="attributes">
+                    <attribute name="domain">[('product_tmpl_id.name', '!=', 'Generico cotizador')]</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

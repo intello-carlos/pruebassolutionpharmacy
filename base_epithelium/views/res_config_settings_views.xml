@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_base_epithelium_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.base.epithelium.view.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="40"></field>
+            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"></field>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@id='companies']/div" position="inside">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="check_status"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="check_status"/>
+                            <div class="text-muted">
+                                Company localization control
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="inherit_res_config_settings_mrp" model="ir.ui.view">
+            <field name="name">inherit_res_config_settings_mrp</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="40"></field>
+            <field name="inherit_id" ref="mrp.res_config_settings_view_form"></field>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@data-string='Manufacturing']/div[last()]" position="after">
+                    <h2>Invima</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-lg-6 col-12 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label string="Days to Expiration" for="days_to_expiration"/>
+                                <div class="text-muted">
+                                    Days to expiration in non-standard manufacturing
+                                </div>
+                                <label string="Days to Expiration" for="days_to_expiration" class="o_light_label"/>
+                                <field name="days_to_expiration"/>
+
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

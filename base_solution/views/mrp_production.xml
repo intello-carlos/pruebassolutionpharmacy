@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Grams pharmaceutical form-->
+         <record id="base_solution_grams_pharmaceutical" model="ir.ui.view">
+            <field name="name">mrp.production.grams.pharmaceutical</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="pharmaceutical_form"/>
+                    <field name="grams_pharmaceutical"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

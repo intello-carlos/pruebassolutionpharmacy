@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="product_template_inherit_view_form" model="ir.ui.view">
+            <field name="name">product.template.inherit.view.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='barcode']" position="after">
+                    <field name="check_status_group" invisible="1"/>
+                    <field name="check_status_categ" invisible="1"/>
+                    <field name="check_status" force_save="1"
+                           attrs="{'readonly':['|',('check_status_group', '=',False),('check_status_categ', '=',False)]}"/>
+                </xpath>
+
+                <field name="uom_po_id" position="after">
+                    <field name="affect_bill_materials"/>
+                </field>
+            </field>
+        </record>
+
+
+        <!-- Inherit Form View to Modify it coding product -->
+        <record id="product_template_inherit_view_form_coding_product" model="ir.ui.view">
+            <field name="name">product_template_inherit_view_form_coding_product</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="coding_products.product_view"/>
+            <field name="arch" type="xml">
+
+                <field name="product_group" position="replace"/>
+                <field name="categ_id" position="replace"/>
+
+                <field name="default_code" position="before">
+                    <field name="product_group"/>
+                    <field name="categ_id"/>
+                </field>
+
+            </field>
+        </record>
+
+        <record id="view_inherit_product_product_form" model="ir.ui.view">
+            <field name="name">view.inherit.product.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='barcode']" position="after">
+                    <field name="affect_bill_materials"/>
+                    <field name="check_status_categ" invisible="1"/>
+                    <field name="check_status_group" invisible="1"/>
+                    <field name="check_status" attrs="{'readonly':['|',('check_status_group', '=',False),('check_status_categ', '=',False)]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!-- Inherit Form View to Modify it coding products -->
+        <record id="inherit_product_product_view_form" model="ir.ui.view">
+            <field name="name">inherit_product_product_view_form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="coding_products.inherit_product_product_view_form"/>
+            <field name="arch" type="xml">
+
+                <field name="product_group" position="replace"/>
+                <field name="categ_id" position="replace"/>
+
+                <field name="default_code" position="before">
+                    <field name="product_group"/>
+                    <field name="categ_id"/>
+                </field>
+
+            </field>
+        </record>
+
+
+        <record id="product_template_pharmaceutical_view" model="ir.ui.view">
+            <field name="name">product.template.pharmaceutical.view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='inventory']" position="after">
+                    <page string="Pharmaceutical product" name="Pharmaceutical product">
+                        <group string="Pharmaceutical">
+                            <group name="Pharmaceutical">
+                                <field name="pharmaceutical_form"/>
+                                <field name="pharmaceutical_presentation"/>
+                            </group>
+                            <group>
+                                <field name="standard_manufacturing"></field>
+                                <label for="size" string="Size"/>
+                                <div>
+                                    <field name="size" class="oe_inline"/>
+                                    <field name="dough" nolabel="1" class="oe_inline"
+                                           style="margin-left:5px; max-width:40%;"/>
+                                </div>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherit Form View to Modify it Product Category-->
+        <record id="product_category_inherit_view_form" model="ir.ui.view">
+            <field name="name">product_category_inherit_view_form</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="check_status"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!-- Inherit Form View to Modify it Product Group-->
+        <record id="product_group_inherit_view_form" model="ir.ui.view">
+            <field name="name">product_group_inherit_view_form</field>
+            <field name="model">product.group</field>
+            <field name="inherit_id" ref="coding_products.coding_products_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="check_status"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

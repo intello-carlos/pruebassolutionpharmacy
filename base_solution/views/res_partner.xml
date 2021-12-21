@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+    <!--Vista de tipo de clientes-->
+        <record id="base_solution.type_tree" model="ir.ui.view">
+            <field name="name">Type client tree</field>
+            <field name="model">type.client</field>
+            <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+            </field>
+        </record>
+
+        <record id="base_solution.type_form" model="ir.ui.view">
+            <field name="name">Type client form</field>
+            <field name="model">type.client</field>
+            <field name="arch" type="xml">
+            <form string="Type client">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="code" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="base_solution.type_client_action_window">
+            <field name="name">Type client</field>
+            <field name="res_model">type.client</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+         <menuitem name="Type client"
+              id="base_solution.menu_type_client" 
+              parent="contacts.res_partner_menu_config"
+              sequence="5"
+              action="base_solution.type_client_action_window"/>
+
+        <record id="solution_pharmacy_add_field_typeclient" model="ir.ui.view">
+            <field name="name">res.partner.type.client</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group/group/field[@name='category_id']" position="after">
+                    <field name="client_type"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

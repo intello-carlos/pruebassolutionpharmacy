@@ -1,0 +1,155 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* coding_products
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20200114\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-17 17:11+0000\n"
+"PO-Revision-Date: 2020-02-17 12:12-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_CO\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: coding_products
+#: model:ir.actions.act_window,name:coding_products.action_coding_products
+msgid "Coding Products"
+msgstr "Código de Productos"
+
+#. module: coding_products
+#: model_terms:ir.ui.view,arch_db:coding_products.coding_products_tree
+msgid "Coding Products Tree"
+msgstr ""
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__consecutive
+msgid "Consecutive"
+msgstr "Consecutivo"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__is_automatic
+#: model:ir.model.fields,field_description:coding_products.field_product_product__is_automatic
+#: model:ir.model.fields,field_description:coding_products.field_product_template__is_automatic
+msgid "Consecutive Automatic"
+msgstr "Consecutivo Automatico"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_template__default_code
+msgid "Default Code"
+msgstr ""
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: coding_products
+#: model:ir.ui.menu,name:coding_products.menu_coding_products
+msgid "Group Products"
+msgstr "Grupo de Productos"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__id
+msgid "ID"
+msgstr ""
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__initials
+msgid "Initials"
+msgstr "Iniciales"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__write_uid
+msgid "Last Updated by"
+msgstr "Última Modificación por"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__write_date
+msgid "Last Updated on"
+msgstr "Ultima Actualización en"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__name
+msgid "Name Group"
+msgstr "Nombre de Grupo"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_product__product_group
+#: model:ir.model.fields,field_description:coding_products.field_product_template__product_group
+msgid "Product Group"
+msgstr "Grupo de Producto"
+
+#. module: coding_products
+#: model_terms:ir.ui.view,arch_db:coding_products.coding_products_form
+msgid "Product Group Form"
+msgstr "Plantilla de Grupo"
+
+#. module: coding_products
+#: model:ir.model,name:coding_products.model_product_template
+msgid "Product Template"
+msgstr "Plantilla del Producto"
+
+#. module: coding_products
+#: model:ir.model,name:coding_products.model_product_group
+msgid "Products Group"
+msgstr "Grupos del producto"
+
+#. module: coding_products
+#: model:ir.model.fields,field_description:coding_products.field_product_group__range_zeros
+msgid "Range Zeros"
+msgstr "Rango de ceros"
+
+#. module: coding_products
+#: model:ir.model.constraint,message:coding_products.constraint_product_template_default_uniq
+msgid "¡you cannot have records with the same default codes!"
+msgstr "¡No puede tener registros con los mismos códigos predeterminados!"
+
+#. module: coding_products
+#: model:ir.model.constraint,message:coding_products.constraint_product_group_initials_uniq
+msgid "¡you cannot have records with the same initials!"
+msgstr "¡No puede tener registros con las mismas iniciales!"
+
+#. module: coding_products
+#: model:ir.model.constraint,message:coding_products.constraint_product_group_name_uniq
+msgid "¡you cannot have records with the same name!"
+msgstr "¡No puede tener registros con los mismos nombres!"
+
+#. module: coding_products
+#: model:ir.model.constraint,message:coding_products.constraint_product_group_name_init_uniq
+msgid "¡you cannot have records with the same names and initials!"
+msgstr "¡No puede tener registros con los mismos nombres e iniciales!"
+
+#. module: coding_products
+#: model:ir.model.constraint,message:coding_products.constraint_product_template_name_cod_uniq
+msgid "¡you cannot have records with the same names and product groups!"
+msgstr "¡No puede tener registros con el mismo nombre y grupo de productos!"
+
+#. module: coding_products
+#: model:ir.model.constraint,message:coding_products.constraint_product_template_name_def_cod_uniq
+msgid ""
+"¡you cannot have records with the same names, default codes and product "
+"groups!"
+msgstr ""
+"¡No puede tener registros con los mismos nombres, códigos predeterminados y "
+"grupos de productos! "

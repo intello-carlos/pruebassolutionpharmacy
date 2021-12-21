@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+    <!--Vista de tarifa de descuentos segun sea el tipo de cliente-->
+        <record id="quotator.discount_tree" model="ir.ui.view">
+            <field name="name">Discount rates tree</field>
+            <field name="model">discount.rates</field>
+            <field name="arch" type="xml">
+            <tree>
+                <field name="type_id" options="{'no_open':True,'no_create': True}"/>
+                <field name="percentage"/>
+            </tree>
+            </field>
+        </record>
+
+        <record id="quotator.discount_form" model="ir.ui.view">
+            <field name="name">Discount rates form</field>
+            <field name="model">discount.rates</field>
+            <field name="arch" type="xml">
+            <form string="Discount rates">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="type_id"/>
+                            <field name="check_validation" invisible="True"/>
+                        </group>
+                        <group>
+                            <field name="percentage"/>
+                        </group>
+                    </group>
+                    <notebook string="Discount rates">
+                        <page string="Line discount">
+                            <field name="lines_price">
+                                <tree editable="bottom">
+                                    <field name="start"/>
+                                    <field name="final"/>
+                                    <field name="base_price"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="quotator.discount_action_window">
+            <field name="name">Discount Rates</field>
+            <field name="res_model">discount.rates</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+         <menuitem name="Rates"
+              id="quotator.menu_discount_rates" 
+              parent="quotator.menu_root" 
+              action="quotator.discount_action_window"/>
+    </data>
+</odoo>

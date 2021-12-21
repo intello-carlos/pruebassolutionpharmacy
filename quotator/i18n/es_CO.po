@@ -1,0 +1,592 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* quotator
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 15:01+0000\n"
+"PO-Revision-Date: 2021-11-12 15:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: quotator
+#: code:addons/quotator/models/quotator_lines.py:0
+#, python-format
+msgid "!! You do not have, selected a client !!"
+msgstr "No tienes, seleccionado un cliente"
+
+#. module: quotator
+#: model_terms:ir.ui.view,arch_db:quotator.update_report_solucion_pharmacy
+msgid "<strong>Final client:</strong>"
+msgstr "<strong>Cliente final:</strong>"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__access_warning
+msgid "Access warning"
+msgstr "Advertencia de acceso"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model,name:quotator.model_res_partner
+msgid "Add customer type field"
+msgstr "Agregar campo de tipo de cliente"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_raw_material__appointment_id
+msgid "Appointment id"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: quotator
+#: model_terms:ir.ui.view,arch_db:quotator.form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: quotator
+#: model:ir.model.fields.selection,name:quotator.selection__quotator_own__state__cancel
+msgid "Cancelled"
+msgstr "Cancelada"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__category
+#: model:ir.model.fields,field_description:quotator.field_raw_material__category
+msgid "Category"
+msgstr "Categoria"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__partner_id
+msgid "Client"
+msgstr "Cliente"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__create_uid
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__create_uid
+#: model:ir.model.fields,field_description:quotator.field_raw_material__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__create_date
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__create_date
+#: model:ir.model.fields,field_description:quotator.field_raw_material__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__display_name
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__display_name
+#: model:ir.model.fields,field_description:quotator.field_raw_material__display_name
+#: model:ir.model.fields,field_description:quotator.field_res_partner__display_name
+#: model:ir.model.fields,field_description:quotator.field_sale_order__display_name
+#: model:ir.model.fields,field_description:quotator.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "Nombre Público"
+
+#. module: quotator
+#: model:ir.model.fields.selection,name:quotator.selection__res_partner__type_client__distributor
+msgid "Distributor"
+msgstr "Distribuidor"
+
+#. module: quotator
+#: model:ir.model.fields.selection,name:quotator.selection__quotator_own__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__expiration_date
+msgid "Expiration date"
+msgstr "Fecha de expiracion"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__x_studio_binary_field_PaxT9_filename
+msgid "Filename for x_studio_binary_field_PaxT9"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_sale_order__final_client
+msgid "Final client"
+msgstr "Cliente final"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__final_product
+msgid "Final product"
+msgstr "Producto final"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_sale_order_line__grams_pharmaceutical
+msgid "Grams"
+msgstr "Gramos"
+
+#. module: quotator
+#: model:res.groups,name:quotator.solution-pharmacy_group_admin
+msgid "Group admin"
+msgstr "Grupo administrador"
+
+#. module: quotator
+#: model:res.groups,name:quotator.solution-pharmacy_group_distributor
+msgid "Group distributor"
+msgstr "Grupo distribuidor"
+
+#. module: quotator
+#: model:res.groups,name:quotator.solution-pharmacy_group_specialist
+msgid "Group specialist"
+msgstr "Grupo especialista"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__id
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__id
+#: model:ir.model.fields,field_description:quotator.field_raw_material__id
+#: model:ir.model.fields,field_description:quotator.field_res_partner__id
+#: model:ir.model.fields,field_description:quotator.field_sale_order__id
+#: model:ir.model.fields,field_description:quotator.field_sale_order_line__id
+msgid "ID"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__message_needaction
+#: model:ir.model.fields,help:quotator.field_quotator_own__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__message_has_error
+#: model:ir.model.fields,help:quotator.field_quotator_own__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines____last_update
+#: model:ir.model.fields,field_description:quotator.field_quotator_own____last_update
+#: model:ir.model.fields,field_description:quotator.field_raw_material____last_update
+#: model:ir.model.fields,field_description:quotator.field_res_partner____last_update
+#: model:ir.model.fields,field_description:quotator.field_sale_order____last_update
+#: model:ir.model.fields,field_description:quotator.field_sale_order_line____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__write_uid
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__write_uid
+#: model:ir.model.fields,field_description:quotator.field_raw_material__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__write_date
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__write_date
+#: model:ir.model.fields,field_description:quotator.field_raw_material__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: quotator
+#: model:ir.model,name:quotator.model_raw_material
+msgid "List of subjects"
+msgstr "Lista de materias"
+
+#. module: quotator
+#: model:ir.ui.menu,name:quotator.quotator
+msgid "Main"
+msgstr "Principal"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__quotator_lines
+#: model:ir.model.fields,field_description:quotator.field_sale_order__raw_material
+msgid "Materials"
+msgstr "Materiales"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__medical_formula
+#: model:ir.model.fields,field_description:quotator.field_sale_order__medical_formula
+msgid "Medical formula"
+msgstr "Formula medica"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: quotator
+#: code:addons/quotator/models/quotator.py:0
+#: code:addons/quotator/models/quotator.py:0
+#: code:addons/quotator/models/quotator.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields.selection,name:quotator.selection__quotator_own__state__posted
+msgid "Open"
+msgstr "Abierta"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__patient
+#: model:ir.model.fields.selection,name:quotator.selection__res_partner__type_client__patient
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__percentage
+#: model:ir.model.fields,field_description:quotator.field_raw_material__percentage
+msgid "Percentage(%)"
+msgstr "Porcentaje(%)"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__pharmaceutical_form
+#: model:ir.model.fields,field_description:quotator.field_sale_order_line__pharmaceutical_form
+msgid "Pharmaceutical form"
+msgstr "Forma farmaceutica"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__pricelist_id
+msgid "Pricelist"
+msgstr "Lista de precios"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__product_id
+#: model:ir.model.fields,field_description:quotator.field_raw_material__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__material_qty
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__product_qty
+#: model:ir.model.fields,field_description:quotator.field_raw_material__product_qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__quotator_date
+msgid "Quotation date"
+msgstr "Fecha de cotización"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__user
+#: model:ir.ui.menu,name:quotator.menu_root
+msgid "Quotator"
+msgstr "Cotizador"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__quotator_id
+msgid "Quotator id"
+msgstr "Id cotizacion"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__sale_order
+#: model:ir.model.fields,field_description:quotator.field_raw_material__sale_order
+#: model_terms:ir.ui.view,arch_db:quotator.form
+#: model_terms:ir.ui.view,arch_db:quotator.solution_pharmacy_add_page_saleorder
+msgid "Raw material"
+msgstr "Materia prima"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__name
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model,name:quotator.model_sale_order
+msgid "Sales Order"
+msgstr ""
+"#-#-#-#-#  es_CO.po (Odoo 9.0)  #-#-#-#-#\n"
+"Orden de Venta\n"
+"#-#-#-#-#  es_CO.po (Odoo 9.0)  #-#-#-#-#\n"
+"Pedido de Venta"
+
+#. module: quotator
+#: model:ir.model,name:quotator.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de la Orden de Venta"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: quotator
+#: model_terms:ir.ui.view,arch_db:quotator.form
+msgid "Send quotator"
+msgstr "Enviar cotizacion"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: quotator
+#: model:ir.model,name:quotator.model_quotator_own
+msgid "Solution Pharmacy Quotator"
+msgstr "Cotizador de Solution Pharmacy"
+
+#. module: quotator
+#: model:ir.model,name:quotator.model_quotator_lines
+msgid "Solution Pharmacy Quotator Lines"
+msgstr "Linea de cotizacion de Solution Pharmacy"
+
+#. module: quotator
+#: model:ir.model.fields.selection,name:quotator.selection__res_partner__type_client__specialist
+msgid "Specialist"
+msgstr "Especialista"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__price_total
+#: model:ir.model.fields,field_description:quotator.field_raw_material__price_total
+msgid "Subtotal price"
+msgstr "Precio subtotal"
+
+#. module: quotator
+#: code:addons/quotator/models/quotator.py:0
+#, python-format
+msgid "The expiration date cannot be less than the application creation date"
+msgstr ""
+"La fecha de vencimiento no puede ser menor que la fecha de creación de la "
+"aplicación."
+
+#. module: quotator
+#: code:addons/quotator/models/quotator.py:0
+#, python-format
+msgid "The percentages are not correct"
+msgstr "Los porcentajes no son correctos"
+
+#. module: quotator
+#: code:addons/quotator/models/quotator.py:0
+#, python-format
+msgid "There are no selected raw materials"
+msgstr "No hay materias primas seleccionadas"
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__pricelist_id
+msgid ""
+"This pricelist will be used, instead of the default one, for sales to the "
+"current partner"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__total
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__total_pharmaceutical_form
+msgid "Total"
+msgstr "Total"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__total_grams
+msgid "Total size(gr)"
+msgstr "Tamaño total(gr)"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_res_partner__type_client
+#: model:ir.model.fields,field_description:quotator.field_res_users__type_client
+msgid "Type Client"
+msgstr "Tipo de cliente"
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_lines__price_unit
+#: model:ir.model.fields,field_description:quotator.field_raw_material__price_unit
+msgid "Unit Price"
+msgstr "Precio unitario"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,help:quotator.field_quotator_own__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__x_studio_binary_field_PaxT9
+msgid "X Studio Binary Field Paxt9"
+msgstr ""
+
+#. module: quotator
+#: model:ir.actions.act_window,name:quotator.action_window
+msgid "quotes"
+msgstr "Cotizaciones"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__value_pharmaceutical_form
+msgid "size(g) pharmaceutical form"
+msgstr "Tamaño (g) forma farmacéutica"
+
+#. module: quotator
+#: model:ir.model.fields,field_description:quotator.field_quotator_own__subtotal_grams
+msgid "subtotal size(gr)"
+msgstr "Tamaño subtotal(gr)"

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Pharmaceutical form-->
+        <record id="pharmaceutical_form_form" model="ir.ui.view">
+            <field name="name">pharmaceutical.form</field>
+            <field name="model">pharmaceutical.form</field>
+            <field name="arch" type="xml">
+                <form string="Pharmceutical form">
+                    <sheet>
+                        <group separator="Pharmceutical form">
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="code" readonly="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="pharmaceutical_form_tree" model="ir.ui.view">
+            <field name="name">pharmaceutical.form.tree</field>
+            <field name="model">pharmaceutical.form</field>
+            <field name="arch" type="xml">
+                <tree string="Pharmaceutical form Tree">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pharmaceutical_form_action" model="ir.actions.act_window">
+            <field name="name">Pharmaceutical form</field>
+            <field name="res_model">pharmaceutical.form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="pharmaceutical_form_action"
+                  name="Pharmaceutical form" id="pharmaceutical_form_menu"
+                  parent="stock.menu_stock_inventory_control"
+                  sequence="17"/>
+
+        <!-- Pharmaceutical presentation-->
+        <record id="pharmaceutical_presentation_form" model="ir.ui.view">
+            <field name="name">pharmaceutical.presentation</field>
+            <field name="model">pharmaceutical.presentation</field>
+            <field name="arch" type="xml">
+                <form string="Pharmaceutical presentation">
+                    <sheet>
+                        <group separator="Pharmaceutical presentation">
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="code" readonly="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="pharmaceutical_presentation_tree" model="ir.ui.view">
+            <field name="name">pharmaceutical.presentation.tree</field>
+            <field name="model">pharmaceutical.presentation</field>
+            <field name="arch" type="xml">
+                <tree string="Pharmaceutical presentation Tree">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pharmaceutical_presentation_action" model="ir.actions.act_window">
+            <field name="name">Pharmaceutical presentation</field>
+            <field name="res_model">pharmaceutical.presentation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="pharmaceutical_presentation_action"
+                  name="Pharmaceutical presentation" id="pharmaceutical_presentation_menu"
+                  parent="stock.menu_stock_inventory_control"
+                  sequence="18"/>
+    </data>
+</odoo>

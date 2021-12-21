@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_production_lines,access_production_lines,model_production_lines,base.group_user,1,1,1,1
+access_pharmaceutical_form,access_pharmaceutical_form,model_pharmaceutical_form,,1,1,1,1
+access_pharmaceutical_presentation,access_pharmaceutical_presentation,model_pharmaceutical_presentation,,1,1,1,1
+access_mrp_production_simulation_lot,access_mrp_production_simulation_lot,model_mrp_production_simulation_lot,base.group_user,1,1,1,1

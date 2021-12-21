@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+
+        <record id="solution-pharmacy_group_specialist" model="res.groups">
+            <field name="name">Group specialist</field>
+        </record>
+        
+        <record id="solution-pharmacy_group_distributor" model="res.groups">
+            <field name="name">Group distributor</field>
+        </record>
+
+        <record id="solution-pharmacy_group_admin" model="res.groups">
+            <field name="name">Group admin</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,109 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="quotator.list">
+      <field name="name">Quotator own list</field>
+      <field name="model">quotator.own</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="partner_id"/>
+          <field name="user"/>
+          <field name="quotator_date"/>
+          <field name="expiration_date"/>
+          <field name="patient"/>
+          <field name="pharmaceutical_form"/>
+          <field name="final_product"/>
+          <field name="subtotal_grams"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="quotator.form">
+      <field name="name">Quotator own form</field>
+      <field name="model">quotator.own</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+          <button name="send_quotation" string="Send quotator" type="object" states="draft" class="btn-primary"/>
+            <button name="action_cancel" type="object" string="Cancel" attrs="{'invisible': [('state', 'not in', 'draft')]}"/>
+            <field name="state" widget="statusbar" statusbar_visible="draft,posted,cancel"/>  
+          </header>
+          <sheet>
+          <h2>
+            <field name="name" readonly="1"/>
+          </h2>
+            <group>
+              <group>
+                <field name="user" options="{'no_open':True,'no_create': True}"/>
+                <field name="partner_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                <field name="patient" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                <field name="final_product"/>
+                <field name="product_qty" invisible="True"/>
+                <field name="medical_formula" widget="binary"/>
+                <field name="presentation_id"/>
+              </group>
+              <group>
+                <field name="quotator_date"/>
+                <field name="expiration_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                <field name="pharmaceutical_form"/>
+                <field name="subtotal_grams"/>
+                <field name="line_production_id"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Raw material">
+                <field name="quotator_lines" widget="one2many_list" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                  <tree editable="bottom">
+                    <field name="quotator_id" invisible="1"/>
+                    <field name="product_id" domain="[('categ_id', 'in', ('Materias Primas / Activos'))]" 
+                                             attrs="{'readonly': [('id', '!=', False)]}" 
+                                             options="{'no_create': True}"/>
+                    <field name="category" invisible="1"/>
+                    <field name="percentage"/>
+                    <field name="material_qty" readonly="True"/>
+                    <field name="price_unit" invisible="0"/>
+                    <field name="price_total" invisible="0"/>
+                  </tree>
+                </field>
+                <group class="oe_subtotal_footer oe_right" colspan="2" name="quotator_total">
+                  <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                    <label for="total" />
+                  </div>
+                  <field name="total" nolabel="1" class="oe_subtotal_footer_separator"/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids"/>
+            <field name="activity_ids"/>
+            <field name="message_ids"/>
+          </div>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="quotator.action_window">
+      <field name="name">quotes</field>
+      <field name="res_model">quotator.own</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Quotator" 
+              id="quotator.menu_root"
+              sequence="3"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Main" 
+              id="quotator.quotator" 
+              parent="quotator.menu_root" 
+              action="quotator.action_window"/>
+  </data>
+</odoo>

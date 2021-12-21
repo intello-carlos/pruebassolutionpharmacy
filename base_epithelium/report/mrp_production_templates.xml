@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <template id="internal_layout_ephi">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+
+            <div class="header mb-2">
+                <div class="row">
+                    <div class="col-3 mb4">
+                        <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 100px;"
+                             alt="Logo"/>
+                    </div>
+                    <div class="col-6"/>
+                    <div class="col-3 text-right" style="font-size: 12px;">
+                        <table class="w-100" style="text-align: center; border: 1px solid black">
+                            <thead styl="border: 1px solid black">
+                                <th style="" colspan="2"><strong>FTO-PRO-011-2</strong></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w-25" style="border: 1px solid black"><strong>Fecha</strong></td>
+                                    <td class="w-75" style="border: 1px solid black">
+                                        <span>20.01.20</span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="w-25" style="border: 1px solid black"><strong>Estado</strong></td>
+                                    <td class="w-75" style="border: 1px solid black">
+                                        <span>Aprobado</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="w-25" style="border: 1px solid black"><strong>Página</strong></td>
+                                    <td class="w-75" style="border: 1px solid black">
+                                        <span class="list-inline-item"><span class="page"/></span>
+                                        <span class="list-inline-item">de</span>
+                                        <span class="list-inline-item"><span class="topage"/></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                 t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-raw="0"/>
+            </div>
+
+        </template>
+
+
+        <template id="report_mrporder_ep" inherit_id="mrp.report_mrporder">
+            <xpath expr="//t[@t-call='web.internal_layout']" position="replace">
+                <t t-call="base_epithelium.internal_layout_ephi">
+                    <div class="page mt-5 pt-5">
+                        <div class="row pt-5" style="font-size: 7pt;">
+                            <div class="col-6">
+                                <h2><strong style="font-size: 9pt;">Client:</strong> <span style="font-size: 9pt;"
+                                                                                            t-field="o.partner_id"/></h2><br/>
+                                <strong>Patient:</strong> <span t-field="o.patient"/><br/>
+                                <strong>Pharmaceutical Form:</strong> <span t-field="o.pharmaceutical_form"/><br/>
+                                <strong>Presentation:</strong> <span t-field="o.pharmaceutical_presentation"/><br/>
+                                <strong>Size:</strong> <span t-field="o.size"/><br/>
+                                <strong>Issued:</strong> <span t-field="o.user_id"/><br/>
+                                <strong>Finished Product:</strong> <span t-field="o.product_id"/>
+                            </div>
+                            <div class="col-6">
+                                <h2><strong style="font-size: 9pt;">Production Order:</strong> <span
+                                        style="font-size: 9pt;" t-field="o.name"/></h2>
+                                <strong>Planned Date:</strong> <span t-field="o.date_planned_start"/><br/>
+                                <strong>Due Date:</strong> <span t-field="o.due_date"/><br/><br/>
+                             <!--   <span class="text-right mt-4">
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)"
+                                         style="width:350px;height:60px"/>
+                                </span>  -->
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <table class="table table-sm" style="font-size: 7pt;">
+                                    <thead>
+                                        <tr style="line-height: 14px;">
+                                            <th style="text-align: center; width: 5%;"  scope="col">#</th>
+                                            <th style="text-align: left; width: 35%;" scope="col">Composition</th>
+                                            <th style="text-align: right; width: 10%;" scope="col">Percent</th>
+                                            <th style="text-align: right; width: 10%;" scope="col">Quantity</th>
+                                            <th style="text-align: right; width: 10%;" scope="col">Lot Quantity</th>
+                                            <th style="text-align: center; width: 10%;" scope="col">Weigh Quantity</th>
+                                            <th style="text-align: left; width: 10%;" scope="col">Lot</th>
+                                            <th style="text-align: left; width: 10%;" scope="col">Due Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="o.get_composition_table()[0]" t-as="line">
+                                            <t t-if="line['head']">
+                                                <tr style="line-height: 14px;">
+                                                    <th style="background: #dedede; text-align: center;" scope="row"><t
+                                                            t-esc="line['number']"/></th>
+                                                    <td style="background: #dedede;"><t t-esc="line['product']"/></td>
+                                                    <td style="background: #dedede; text-align: right;"><t
+                                                            t-esc="line['percent']"/></td>
+                                                    <td style="background: #dedede; text-align: right;"><t
+                                                            t-esc="line['quantity']"/></td>
+                                                    <td style="background: #dedede;"><t
+                                                            t-esc="line['quantity_lot']"/></td>
+                                                    <td style="background: #dedede;"/>
+                                                    <td style="background: #dedede;"><t t-esc="line['lot']"/></td>
+                                                    <td style="background: #dedede;"><t t-esc="line['due_date']"/></td>
+                                                </tr>
+                                            </t>
+                                            <t t-if="not line['head']">
+                                                <tr style="line-height: 14px;">
+                                                    <th scope="row"><t t-esc="line['number']"/></th>
+                                                    <td><t t-esc="line['product']"/></td>
+                                                    <td><t t-esc="line['percent']"/></td>
+                                                    <td><t t-esc="line['quantity']"/></td>
+                                                    <td style="text-align: right;"><t
+                                                            t-esc="line['quantity_lot']"/></td>
+                                                    <td/>
+                                                    <td><t t-esc="line['lot']"/></td>
+                                                    <td><t t-esc="line['due_date']"/></td>
+                                                </tr>
+                                            </t>
+                                        </t>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr style="border-top: 2px solid #999; line-height: 14px;">
+                                            <th/>
+                                            <td>Totals</td>
+                                            <td style="text-align: right;"><t
+                                                    t-esc="o.get_composition_table()[1]['total_percent']"/></td>
+                                            <td style="text-align: right;"><t
+                                                    t-esc="o.get_composition_table()[1]['total_quantity']"/></td>
+                                            <td style="text-align: right;"><t
+                                                    t-esc="o.get_composition_table()[1]['total_quantity_lot']"/></td>
+                                            <td/>
+                                            <td/>
+                                            <td/>
+                                        </tr>
+                                        <tr style="line-height: 14px;">
+                                            <th/>
+                                            <td>Total units</td>
+                                            <td style="text-align: right;"><t t-esc="o.product_qty"/></td>
+                                            <td/>
+                                            <td/>
+                                            <td/>
+                                            <td/>
+                                            <td/>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row mt-5" style="font-size: 7pt;">
+                            <div class="col-12">
+                                <h3 style="font-size: 7pt;"><strong>PROCESS: According to production procedure</strong></h3>
+
+                                <table class="w-100">
+                                    <tr>
+                                        <td class="w-50"><strong>Number of units obtained</strong></td>
+                                        <td class="w-50"><strong>Yield</strong></td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                <table class="w-100">
+                                    <tr>
+                                        <td class="w-25"><strong>Dispensing</strong> <input
+                                                style="width: 13px; height: 13px; border: 1px solid black;"/>
+                                            <strong style="padding-left: 10pt;">
+                                                _______________________________</strong></td>
+                                        <td class="w-25"><strong>Elaboration</strong> <input
+                                                style="width: 13px; height: 13px; border: 1px solid black;"/>
+                                            <strong style="padding-left: 10pt;">
+                                                _______________________________</strong></td>
+                                        <td class="w-25"><strong>Packing</strong> <input
+                                                style="width: 13px; height: 13px; border: 1px solid black;"/>
+                                            <strong style="padding-left: 10pt;">
+                                                _______________________________</strong></td>
+                                        <td class="w-25"><strong>Conditioning</strong> <input
+                                                style="width: 13px; height: 13px; border: 1px solid black;"/>
+                                            <strong style="padding-left: 10pt;">
+                                                _______________________________</strong></td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                <br/>
+
+                                <h3 style="font-size: 7pt;"><strong>PROCESS CONTROL</strong></h3>
+                                <table class="w-100" style="border-spacing: 12pt;">
+                                    <tr style="line-height: 25pt;">
+                                        <td><strong>Aspectos</strong></td>
+                                        <td style="padding-left: 40pt;"><strong>
+                                            _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</strong></td>
+                                    </tr>
+                                    <tr style="line-height: 25pt;">
+                                        <td><strong>pH</strong></td>
+                                        <td style="padding-left: 40pt;">
+                                            <strong>
+                                                _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</strong></td>
+                                    </tr>
+                                </table>
+
+                                <br/>
+                                <br/>
+                                <br/>
+                                <table class="w-100">
+
+                                    <tr>
+                                        <td style="padding-left: 40pt;" class="w-25"><strong>
+                                            _________________________________________</strong></td>
+                                        <td style="padding-left: 40pt;" class="w-25"><strong>
+                                            _________________________________________</strong></td>
+                                        <td style="padding-left: 40pt;" class="w-25"><strong>
+                                            _________________________________________</strong></td>
+                                        <td style="padding-left: 40pt;" class="w-25"><strong>
+                                            _________________________________________</strong></td>
+                                    </tr>
+
+                                    <tr style="text-align: center;">
+                                        <td class="w-25"><strong>Elaborated</strong></td>
+                                        <td class="w-25"><strong>Package</strong></td>
+                                        <td class="w-25"><strong>Verify Production Manager</strong></td>
+                                        <td class="w-25"><strong>Vo Bo Technical Director</strong></td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <template id="update_report_solucion_pharmacy" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//div[@t-if='doc.user_id.name']" position="after">
+                <div t-if="doc.final_client" class="col-auto col-3 mw-100 mb-2">
+                    <strong>Final client:</strong>
+                    <p class="m-0" t-field="doc.final_client"/>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

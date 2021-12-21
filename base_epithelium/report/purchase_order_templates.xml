@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="external_layout_epithelium">
+        <t t-if="not o" t-set="o" t-value="doc"/>
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+        <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
+        <div t-attf-class="header o_company_#{company.id}_layout">
+            <div class="row" style="border: 1px solid #000;">
+                <div class="col-3 align-items-center" style="border-right: 1px solid black;">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)"
+                         style="max-height: 90px; margin: auto;"
+                         alt="Logo"/>
+                </div>
+                <div class="col-5 h-100 text-center"
+                     style="height:100% !important; margin-top: 20px!important;">
+                    <h5 style="margin-top: 12px;"><b>PURCHASE ORDER FORM</b>
+                        <!--                        <br/>-->
+                        <!--                        <span style="font-size: 15px;">-->
+                        <!--                            No. <span t-field="o.name"/>-->
+                        <!--                        </span>-->
+                    </h5>
+                </div>
+                <div class="col-4" style="padding: 0;">
+                    <table class="w-100" style="text-align: center; border-left: 1px solid black">
+                        <thead styl="border: 1px solid black">
+                            <th style="" colspan="2"><strong>FTO-COM-002-3</strong></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="w-25" style="border: 1px solid black"><strong>Date</strong></td>
+                                <td class="w-75"
+                                    style="border-left: 1px solid black; border-top: 1px solid black;">
+                                    <span>27.09.16</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="w-25" style="border: 1px solid black"><strong>State</strong></td>
+                                <td class="w-75"
+                                    style="border-left: 1px solid black; border-top: 1px solid black;">
+                                    <span>Approved</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-25"
+                                    style="border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+                                    <strong>Page</strong>
+                                </td>
+                                <td class=" w-75"
+                                    style="border-left: 1px solid black; border-top: 1px solid black;">
+                                    <span class="list-inline-item"><span class="page"/></span>
+                                    <span class="list-inline-item">de</span>
+                                    <span class="list-inline-item"><span class="topage"/></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+             t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <t t-raw="0"/>
+        </div>
+        <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
+            <div class="text-justify" style="border-top: 1px solid black;">
+                <span>Observations: Please provide a certificate of analysis or technical data sheet and a safety
+                    certificate for each one.
+                    of the requested raw materials.</span>
+                <!--                <div name="financial_infos">-->
+                <!--                    <span t-field="company.report_footer"/>-->
+                <!--                </div>-->
+
+                <!--                <div t-if="report_type == 'pdf'" class="text-muted">-->
+                <!--                    Page: <span class="page"/> / <span class="topage"/>-->
+                <!--                </div>-->
+            </div>
+        </div>
+    </template>
+
+    <template id="external_layout_epithelium_solicitud">
+        <t t-if="not o" t-set="o" t-value="doc"/>
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+        <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
+        <div t-attf-class="header o_company_#{company.id}_layout">
+            <div class="row" style="border: 1px solid #000;">
+                <div class="col-3 align-items-center" style="border-right: 1px solid black;">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)"
+                         style="max-height: 90px; margin: auto;"
+                         alt="Logo"/>
+                </div>
+                <div class="col-9 h-100 text-center"
+                     style="height:100% !important; margin-top: 30px!important;">
+                    <h5 style="margin-top: 12px;"><b>REQUEST FOR QUOTATION FORM</b>
+                        <!--                        <br/>-->
+                        <!--                        <span style="font-size: 15px;">-->
+                        <!--                            No. <span t-field="o.name"/>-->
+                        <!--                        </span>-->
+                    </h5>
+                </div>
+<!--                <div class="col-4" style="padding: 0;">
+                    <table class="w-100" style="text-align: center; border-left: 1px solid black">
+                        <thead styl="border: 1px solid black">
+                            <th style="" colspan="2"><strong>FTO-COM-002-3</strong></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="w-25" style="border: 1px solid black"><strong>Date</strong></td>
+                                <td class="w-75"
+                                    style="border-left: 1px solid black; border-top: 1px solid black;">
+                                    <span>27.09.16</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="w-25" style="border: 1px solid black"><strong>State</strong></td>
+                                <td class="w-75"
+                                    style="border-left: 1px solid black; border-top: 1px solid black;">
+                                    <span>Approved</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-25"
+                                    style="border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+                                    <strong>Page</strong>
+                                </td>
+                                <td class=" w-75"
+                                    style="border-left: 1px solid black; border-top: 1px solid black;">
+                                    <span class="list-inline-item"><span class="page"/></span>
+                                    <span class="list-inline-item">de</span>
+                                    <span class="list-inline-item"><span class="topage"/></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>     -->
+            </div>
+        </div>
+        <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+             t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <t t-raw="0"/>
+        </div>
+        <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
+            <div class="text-justify" style="border-top: 1px solid black;">
+                <span>Observations: Please provide a certificate of analysis or technical data sheet and a safety
+                    certificate for each one.
+                    of the requested raw materials.</span>
+                <!--                <div name="financial_infos">-->
+                <!--                    <span t-field="company.report_footer"/>-->
+                <!--                </div>-->
+
+                <!--                <div t-if="report_type == 'pdf'" class="text-muted">-->
+                <!--                    Page: <span class="page"/> / <span class="topage"/>-->
+                <!--                </div>-->
+            </div>
+        </div>
+    </template>
+
+    <template id="report_purchaseorder_document" inherit_id="purchase.report_purchaseorder_document">
+        <xpath expr="//t[@t-call='web.external_layout']" position="replace">
+            <t t-call="base_epithelium.external_layout_epithelium">
+                <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
+                <t t-if="not company">
+                    <!-- Multicompany -->
+                    <t t-if="company_id">
+                        <t t-set="company" t-value="company_id"/>
+                    </t>
+                    <t t-elif="o and 'company_id' in o">
+                        <t t-set="company" t-value="o.company_id.sudo()"/>
+                    </t>
+                    <t t-else="else">
+                        <t t-set="company" t-value="res_company"/>
+                    </t>
+                </t>
+                <div class="page">
+                    <div class="oe_structure"/>
+
+                    <h2 t-if="o.state == 'draft'">Request for Quotation No.
+                        <span t-field="o.name"/>
+                    </h2>
+                    <h2 t-if="o.state in ['sent', 'to approve']">Purchase Order No.
+                        <span t-field="o.name"/>
+                    </h2>
+                    <h2 t-if="o.state in ['purchase', 'done']">Purchase Order No.
+                        <span t-field="o.name"/>
+                    </h2>
+                    <h2 t-if="o.state == 'cancel'">Cancelled Purchase Order No.
+                        <span t-field="o.name"/>
+                    </h2>
+                    <br/>
+                    <table style="text-align: left; border: 1px solid black; margin_bottom: 1em; width: 100%;">
+                        <thead styl="border: 1px solid black">
+                            <th colspan="1" style="border: 1px solid black; padding-left: 5px;">
+                            <strong>Date:</strong></th>
+                            <th colspan="3" style="border: 1px solid black; padding-left: 5px;"><span
+                                    t-field="o.date_approve"/></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td name="td_provider" class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;">
+                                    <strong>Provider name:</strong>
+                                </td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.name"/>
+                                </td>
+                                <td name="td_delivery_to" class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;">
+                                    <strong>Deliver to:</strong>
+                                </td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td name="td_vat" class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;">
+                                    <strong>VAT:</strong>
+                                </td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.vat"/>
+                                </td>
+                                <td name="td_vat" class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;">
+                                    <strong>VAT:</strong>
+                                </td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.vat"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    Phone:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.phone"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>Phone:
+                                    to</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.phone"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    Address:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.street"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    Address:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.street"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    Country:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.country_id.name"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    Country:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.country_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    State:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.state_id.name"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    State:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.state_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    City:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.city_id.name"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    City:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.city_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>Way to
+                                    Pay:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.payment_term_id.name"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>Warehouse
+                                    that
+                                    receives:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="o.picking_type_id.name"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+
+                    <div id="informations" class="row mt32 mb32">
+                        <!--                        <div t-if="o.user_id" class="col-3 bm-2">-->
+                        <!--                            <strong>Purchase Representative:</strong>-->
+                        <!--                            <p t-field="o.user_id" class="m-0"/>-->
+                        <!--                        </div>-->
+                        <div t-if="o.partner_ref" class="col-3 bm-2">
+                            <strong>Your Order Reference:</strong>
+                            <p t-field="o.partner_ref" class="m-0"/>
+                        </div>
+                        <div t-if="o.date_order" class="col-3 bm-2">
+                            <strong>Order Date:</strong>
+                            <p t-field="o.date_order" class="m-0"/>
+                        </div>
+                    </div>
+                    <t t-set="all_taxes" t-value="[]"/>
+                    <table class="table table-sm o_main_table">
+                        <thead>
+                            <tr>
+                                <th name="th_description">
+                                    <strong>Description</strong>
+                                </th>
+                                <!--                                <th name="th_taxes">-->
+                                <!--                                    <strong>Taxes</strong>-->
+                                <!--                                </th>-->
+                                <!--                                <th name="th_date_req" class="text-center">-->
+                                <!--                                    <strong>Date Req.</strong>-->
+                                <!--                                </th>-->
+                                <th name="th_quantity" class="text-right">
+                                    <strong>Qty</strong>
+                                </th>
+                                <th name="th_price_unit" class="text-right">
+                                    <strong>Unit Price</strong>
+                                </th>
+                                <th name="th_amount" class="text-right">
+                                    <strong>Amount</strong>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="current_subtotal" t-value="0"/>
+                            <t t-foreach="o.order_line" t-as="line">
+                                <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal"
+                                   groups="account.group_show_line_subtotals_tax_excluded"/>
+                                <t t-set="current_subtotal" t-value="current_subtotal + line.price_total"
+                                   groups="account.group_show_line_subtotals_tax_included"/>
+
+                                <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
+                                    <t t-if="not line.display_type">
+                                        <td id="product">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <!--                                        <td name="td_taxes">-->
+                                        <!--                                            <span t-esc="', '.join(map(lambda x: x.name, line.taxes_id))"/>-->
+                                        <!--                                        </td>-->
+                                        <t t-esc="all_taxes.extend(line.report_compute_amount())"/>
+                                        <!--                                        <td class="text-center">-->
+                                        <!--                                            <span t-field="line.date_planned"/>-->
+                                        <!--                                        </td>-->
+                                        <td class="text-right">
+                                            <span t-field="line.product_qty"/>
+                                            <span t-field="line.product_uom.name" groups="uom.group_uom"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.price_unit"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.price_subtotal"
+                                                  t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                        </td>
+                                    </t>
+                                    <t t-if="line.display_type == 'line_section'">
+                                        <td colspan="99" id="section">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <t t-set="current_section" t-value="line"/>
+                                        <t t-set="current_subtotal" t-value="0"/>
+                                    </t>
+                                    <t t-if="line.display_type == 'line_note'">
+                                        <td colspan="99" id="note">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                                <t t-if="current_section and (line_last or o.order_line[line_index+1].display_type == 'line_section')">
+                                    <tr class="is-subtotal text-right">
+                                        <td colspan="99" id="subtotal">
+                                            <strong class="mr16">Subtotal</strong>
+                                            <span
+                                                    t-esc="current_subtotal"
+                                                    t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                            />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </t>
+                        </tbody>
+                    </table>
+                    <t t-set="all_tax_dict" t-value="[]"/>
+                    <t t-set="index" t-value="list(set([x.get('id') for x in all_taxes]))"/>
+                    <t t-foreach="index" t-as="i">
+                        <t t-set="name" t-value=""/>
+                        <t t-set="amount" t-value="0"/>
+                        <t t-foreach="all_taxes" t-as="tx">
+                            <t t-if="i == tx.get('id')">
+                                <t t-set="name" t-value="tx.get('name')"/>
+                                <t t-set="amount" t-value="amount + tx.get('amount')"/>
+                            </t>
+                        </t>
+                        <t t-esc="all_tax_dict.append({'name': name, 'amount': amount})"/>
+                    </t>
+                    <div id="total" class="row justify-content-end">
+                        <div class="col-4">
+                            <table class="table table-sm">
+                                <tr class="border-black">
+                                    <td name="td_subtotal_label">
+                                        <strong>Subtotal</strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_untaxed"
+                                              t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td name="td_taxes_label" colspan="2">Taxes</td>
+                                </tr>
+                                <t t-foreach="all_tax_dict" t-as="tx">
+                                    <tr style="font-size: 13px;">
+                                        <td name="td_taxes_label"> - <span t-esc="tx.get('name')"/></td>
+                                        <td class="text-right">
+                                            <span t-esc="tx.get('amount')"
+                                                  t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <tr>
+                                    <td name="td_taxes_label"><strong>Total Taxes</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_tax"
+                                              t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                    </td>
+                                </tr>
+                                <tr class="border-black o_total">
+                                    <td name="td_amount_total_label">
+                                        <strong>Total</strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_total"
+                                              t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <p t-field="o.notes"/>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="report_purchasequotation_document" inherit_id="purchase.report_purchasequotation_document">
+        <xpath expr="//t[@t-call='web.external_layout']" position="replace">
+            <t t-call="base_epithelium.external_layout_epithelium_solicitud">
+                <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
+                <t t-if="not company">
+                    <!-- Multicompany -->
+                    <t t-if="company_id">
+                        <t t-set="company" t-value="company_id"/>
+                    </t>
+                    <t t-elif="o and 'company_id' in o">
+                        <t t-set="company" t-value="o.company_id.sudo()"/>
+                    </t>
+                    <t t-else="else">
+                        <t t-set="company" t-value="res_company"/>
+                    </t>
+                </t>
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <h2>Request for Quotation No.
+                        <span t-field="o.name"/>
+                    </h2>
+                    <br/>
+                    <table style="text-align: left; border: 1px solid black; margin_bottom: 1em; width: 100%;">
+                        <thead styl="border: 1px solid black">
+                            <th colspan="1" style="border: 1px solid black; padding-left: 5px;">
+                            <strong>Date:</strong></th>
+                            <th colspan="3" style="border: 1px solid black; padding-left: 5px;"><span
+                                    t-field="o.date_approve"/></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td name="td_provider" class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;">
+                                    <strong>Provider name:</strong>
+                                </td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.name"/>
+                                </td>
+                                <td name="td_delivery_to" class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;">
+                                    <strong>Deliver to:</strong>
+                                </td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td name="td_vat" class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;">
+                                    <strong>VAT:</strong>
+                                </td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.vat"/>
+                                </td>
+                                <td name="td_vat" class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;">
+                                    <strong>VAT:</strong>
+                                </td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.vat"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    Phone:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.phone"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>Phone:
+                                    to</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.phone"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    Address:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.street"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    Address:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.street"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    Country:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.country_id.name"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    Country:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.country_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    State:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.state_id.name"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    State:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.state_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    City:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.partner_id.city_id.name"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>
+                                    City:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="company.city_id.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>Way to
+                                    Pay:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-esc="o.payment_term_id.name"/>
+                                </td>
+                                <td class="w-15"
+                                    style="border: 1px solid black; width: 15%; padding-left: 5px;"><strong>Warehouse
+                                    that
+                                    receives:</strong></td>
+                                <td class="w-35" style="border: 1px solid black; width: 35%; padding-left: 5px;">
+                                    <span t-field="o.picking_type_id.name"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+
+                    <div id="informations" class="row mt32 mb32">
+                        <!--                        <div t-if="o.user_id" class="col-3 bm-2">-->
+                        <!--                            <strong>Purchase Representative:</strong>-->
+                        <!--                            <p t-field="o.user_id" class="m-0"/>-->
+                        <!--                        </div>-->
+                        <div t-if="o.partner_ref" class="col-3 bm-2">
+                            <strong>Your Order Reference:</strong>
+                            <p t-field="o.partner_ref" class="m-0"/>
+                        </div>
+                        <div t-if="o.date_order" class="col-3 bm-2">
+                            <strong>Order Date:</strong>
+                            <p t-field="o.date_order" class="m-0"/>
+                        </div>
+                    </div>
+                    <t t-set="all_taxes" t-value="[]"/>
+                    <table class="table table-sm o_main_table">
+                        <thead>
+                            <tr>
+                                <th name="th_description">
+                                    <strong>Description</strong>
+                                </th>
+                                <!--                                <th name="th_taxes">-->
+                                <!--                                    <strong>Taxes</strong>-->
+                                <!--                                </th>-->
+                                <!--                                <th name="th_date_req" class="text-center">-->
+                                <!--                                    <strong>Date Req.</strong>-->
+                                <!--                                </th>-->
+                                <th name="th_quantity" class="text-right">
+                                    <strong>Qty</strong>
+                                </th>
+                                <th name="th_price_unit" class="text-right">
+                                    <strong>Unit Price</strong>
+                                </th>
+                                <th name="th_amount" class="text-right">
+                                    <strong>Amount</strong>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="current_subtotal" t-value="0"/>
+                            <t t-foreach="o.order_line" t-as="line">
+                                <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal"
+                                   groups="account.group_show_line_subtotals_tax_excluded"/>
+                                <t t-set="current_subtotal" t-value="current_subtotal + line.price_total"
+                                   groups="account.group_show_line_subtotals_tax_included"/>
+
+                                <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
+                                    <t t-if="not line.display_type">
+                                        <td id="product">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <!--                                        <td name="td_taxes">-->
+                                        <!--                                            <span t-esc="', '.join(map(lambda x: x.name, line.taxes_id))"/>-->
+                                        <!--                                        </td>-->
+                                        <t t-esc="all_taxes.extend(line.report_compute_amount())"/>
+                                        <!--                                        <td class="text-center">-->
+                                        <!--                                            <span t-field="line.date_planned"/>-->
+                                        <!--                                        </td>-->
+                                        <td class="text-right">
+                                            <span t-field="line.product_qty"/>
+                                            <span t-field="line.product_uom.name" groups="uom.group_uom"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.price_unit"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.price_subtotal"
+                                                  t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                        </td>
+                                    </t>
+                                    <t t-if="line.display_type == 'line_section'">
+                                        <td colspan="99" id="section">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <t t-set="current_section" t-value="line"/>
+                                        <t t-set="current_subtotal" t-value="0"/>
+                                    </t>
+                                    <t t-if="line.display_type == 'line_note'">
+                                        <td colspan="99" id="note">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                                <t t-if="current_section and (line_last or o.order_line[line_index+1].display_type == 'line_section')">
+                                    <tr class="is-subtotal text-right">
+                                        <td colspan="99" id="subtotal">
+                                            <strong class="mr16">Subtotal</strong>
+                                            <span
+                                                    t-esc="current_subtotal"
+                                                    t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                            />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </t>
+                        </tbody>
+                    </table>
+                    <t t-set="all_tax_dict" t-value="[]"/>
+                    <t t-set="index" t-value="list(set([x.get('id') for x in all_taxes]))"/>
+                    <t t-foreach="index" t-as="i">
+                        <t t-set="name" t-value=""/>
+                        <t t-set="amount" t-value="0"/>
+                        <t t-foreach="all_taxes" t-as="tx">
+                            <t t-if="i == tx.get('id')">
+                                <t t-set="name" t-value="tx.get('name')"/>
+                                <t t-set="amount" t-value="amount + tx.get('amount')"/>
+                            </t>
+                        </t>
+                        <t t-esc="all_tax_dict.append({'name': name, 'amount': amount})"/>
+                    </t>
+                    <div id="total" class="row justify-content-end">
+                        <div class="col-4">
+                            <table class="table table-sm">
+                                <tr class="border-black">
+                                    <td name="td_subtotal_label">
+                                        <strong>Subtotal</strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_untaxed"
+                                              t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td name="td_taxes_label" colspan="2">Taxes</td>
+                                </tr>
+                                <t t-foreach="all_tax_dict" t-as="tx">
+                                    <tr style="font-size: 13px;">
+                                        <td name="td_taxes_label"> - <span t-esc="tx.get('name')"/></td>
+                                        <td class="text-right">
+                                            <span t-esc="tx.get('amount')"
+                                                  t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <tr>
+                                    <td name="td_taxes_label"><strong>Total Taxes</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_tax"
+                                              t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                    </td>
+                                </tr>
+                                <tr class="border-black o_total">
+                                    <td name="td_amount_total_label">
+                                        <strong>Total</strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="o.amount_total"
+                                              t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <p t-field="o.notes"/>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </xpath>
+    </template>
+    <!--    <template id="report_purchaseorder" inherit="purchase.report_purchaseorder">-->
+    <!--        <t t-call="web.html_container">-->
+    <!--            <t t-foreach="docs" t-as="o">-->
+    <!--                <t t-call="purchase.report_purchaseorder_document" t-lang="o.partner_id.lang"/>-->
+    <!--            </t>-->
+    <!--        </t>-->
+    <!--    </template>-->
+</odoo>

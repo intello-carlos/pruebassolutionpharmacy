@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Pharmaceutical form-->
+        <record id="pharmaceutical_form_view" model="ir.ui.view">
+            <field name="name">pharmaceutical.form.view</field>
+            <field name="model">pharmaceutical.form</field>
+            <field name="inherit_id" ref="base_epithelium.pharmaceutical_form_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="value"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="pharmaceutical_form_view_tree" model="ir.ui.view">
+            <field name="name">pharmaceutical.form.view.tree</field>
+            <field name="model">pharmaceutical.form</field>
+            <field name="inherit_id" ref="base_epithelium.pharmaceutical_form_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="value"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="presentation_form" model="ir.ui.view">
+            <field name="name">presentation.form</field>
+            <field name="model">pharmaceutical.presentation</field>
+            <field name="inherit_id" ref="base_epithelium.pharmaceutical_presentation_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="value"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="presentation_tree" model="ir.ui.view">
+            <field name="name">presentation.tree</field>
+            <field name="model">pharmaceutical.presentation</field>
+            <field name="inherit_id" ref="base_epithelium.pharmaceutical_presentation_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="value"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

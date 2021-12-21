@@ -1,0 +1,145 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_solution
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-09 15:45+0000\n"
+"PO-Revision-Date: 2021-11-09 15:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_solution
+#: model:ir.model,name:base_solution.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Lista de materiales"
+
+#. module: base_solution
+#: model:ir.model,name:base_solution.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr "Línea de Lista de Materiales"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_pharmaceutical_form__code
+msgid "Code"
+msgstr "Código"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_pharmaceutical_form__name
+msgid "Compoung"
+msgstr "Componente"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_pharmaceutical_form__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_pharmaceutical_form__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_mrp_bom__display_name
+#: model:ir.model.fields,field_description:base_solution.field_mrp_bom_line__display_name
+#: model:ir.model.fields,field_description:base_solution.field_mrp_production__display_name
+#: model:ir.model.fields,field_description:base_solution.field_pharmaceutical_form__display_name
+#: model:ir.model.fields,field_description:base_solution.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nombre Público"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_mrp_bom__grams_pharmaceutical
+msgid "Grams"
+msgstr "Gramos"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_mrp_production__grams_pharmaceutical
+msgid "Grams Pharmaceutical"
+msgstr "Gramos"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_mrp_bom__id
+#: model:ir.model.fields,field_description:base_solution.field_mrp_bom_line__id
+#: model:ir.model.fields,field_description:base_solution.field_mrp_production__id
+#: model:ir.model.fields,field_description:base_solution.field_pharmaceutical_form__id
+#: model:ir.model.fields,field_description:base_solution.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_mrp_bom____last_update
+#: model:ir.model.fields,field_description:base_solution.field_mrp_bom_line____last_update
+#: model:ir.model.fields,field_description:base_solution.field_mrp_production____last_update
+#: model:ir.model.fields,field_description:base_solution.field_pharmaceutical_form____last_update
+#: model:ir.model.fields,field_description:base_solution.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_pharmaceutical_form__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_pharmaceutical_form__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: base_solution
+#: model:ir.model,name:base_solution.model_pharmaceutical_form
+msgid "Model that stores the dosage form"
+msgstr ""
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_mrp_production__order_line
+msgid "Order"
+msgstr "Orden"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_mrp_bom_line__percentage
+msgid "Percentage"
+msgstr "Porcentaje"
+
+#. module: base_solution
+#: model:ir.actions.act_window,name:base_solution.pharmaceutical_form_action
+#: model:ir.model.fields,field_description:base_solution.field_mrp_bom__pharmaceutical_id
+#: model:ir.model.fields,field_description:base_solution.field_mrp_production__pharmaceutical_form
+#: model:ir.ui.menu,name:base_solution.pharmaceutical_form_menu
+msgid "Pharmaceutical form"
+msgstr "Forma farmaceutica"
+
+#. module: base_solution
+#: model_terms:ir.ui.view,arch_db:base_solution.pharmaceutical_form_tree
+msgid "Pharmaceutical form Tree"
+msgstr "Árbol de forma farmacéutica"
+
+#. module: base_solution
+#: model_terms:ir.ui.view,arch_db:base_solution.pharmaceutical_form_form
+msgid "Pharmceutical form"
+msgstr "Forma farmaceutica"
+
+#. module: base_solution
+#: model:ir.model,name:base_solution.model_mrp_production
+msgid "Production Order"
+msgstr "Orden de producción"
+
+#. module: base_solution
+#: model:ir.model,name:base_solution.model_sale_order
+msgid "Sales Order"
+msgstr ""
+"#-#-#-#-#  es_CO.po (Odoo 9.0)  #-#-#-#-#\n"
+"Orden de Venta\n"
+"#-#-#-#-#  es_CO.po (Odoo 9.0)  #-#-#-#-#\n"
+"Pedido de Venta"
+
+#. module: base_solution
+#: model:ir.model.fields,field_description:base_solution.field_pharmaceutical_form__value
+msgid "Value x gr"
+msgstr "Valor por gramo"

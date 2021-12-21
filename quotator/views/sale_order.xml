@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record id="solution_pharmacy_add_page_saleorder" model="ir.ui.view">
+            <field name="name">sale.order.raw.material</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page/field[@name='order_line']/.." position="after">
+                    <page string="Raw material">
+                        <field name="raw_material" readonly="1">
+                            <tree editable="bottom">
+                                <field name="product_id"/>
+                                <field name="product_qty"/>
+                                <field name="percentage"/>
+                                <field name="price_unit" invisible="1"/>
+                                <field name="price_total" invisible="1"/>
+                                <field name="appointment_id" invisible="1"/>
+                                <field name="category" invisible="1"/>
+                                <field name="sale_order" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//page/field[@name='order_line']/tree/field[@name='name']" position="before">
+                    <field name="pharmaceutical_form" invisible="1"/>
+                </xpath>
+                <xpath expr="//page/field[@name='order_line']/tree/field[@name='pharmaceutical_form']" position="after">
+                    <field name="grams_pharmaceutical" invisible="1"/>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='payment_term_id']" position="after">
+                    <field name="medical_formula" widget="binary" readonly="True"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

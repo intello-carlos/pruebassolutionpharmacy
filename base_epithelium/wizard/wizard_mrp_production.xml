@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_mrp_production_plan" model="ir.ui.view">
+            <field name="name">mrp.production.plan</field>
+            <field name="model">wizard.mrp.production</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form string="Activity">
+                <span></span>
+                <group>
+                    <group>
+                        <field name="message"/>
+                        <field name="users_ids" widget="many2many_tags" options="{'no_create': True, 'no_create_edit':True}"/>
+                    </group>
+                </group>
+                <footer>
+		    	<button string="Create Activity" name="action_create_wizard" type="object" class="oe_highlight"/>
+		    	<button string="Cancel" special="cancel" type="object" class="oe_highlight"/>
+                </footer>
+            </form>
+            </field>
+        </record>
+        <record id="action_mrp_production_plan" model="ir.actions.act_window">
+            <field name="name">Create Task</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.mrp.production</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

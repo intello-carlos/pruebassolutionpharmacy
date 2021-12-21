@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Grams pharmaceutical form-->
+         <record id="base_solution_pharmaceutical_form" model="ir.ui.view">
+            <field name="name">mrp.bom.pharmaceutical</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="pharmaceutical_id"/>
+                    <field name="grams_pharmaceutical"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@name='components']/field[@name='bom_line_ids']/tree/field[@name='product_qty']" position="before">
+                    <field name="percentage"/>  
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

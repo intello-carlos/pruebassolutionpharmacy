@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="internal_layout_quality_label">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+
+            <div class="header mb-2" style="border: 1px solid black; padding-left: 0pt">
+                <table class="w-100" style="font-size: 14px;">
+                    <tr>
+                        <td rowspan="2" style="width: 30%; border-right: 1px solid black">
+                            <img t-if="company.logo" t-att-src="image_data_uri(company.logo)"
+                                 style="max-height: 60px;"
+                                 alt="Logo"/>
+                        </td>
+
+                        <td rowspan="2" style="width: 40%; border-right: 1px solid black;">
+                            <div class="text-center pt-4">
+                                <span>
+                                    <strong>
+                                        IDENTIFICATION LABEL FORMAT
+                                    </strong>
+                                </span>
+                            </div>
+                        </td>
+
+                        <td style="width: 30%;">
+                            <table style="text-align: center;">
+                                <tr>
+                                    <th style="" colspan="2"><strong>FTO-COC-010-2</strong></th>
+                                </tr>
+                                <tr>
+                                    <tr>
+                                        <td style="width: 30%; border-top: 1px solid black; border-right: 1px solid black;">
+                                            <strong>Fecha</strong></td>
+                                        <td style="width: 70%; border-top: 1px solid black">
+                                            <span>20.01.20</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width: 30%; border-top: 1px solid black; border-right: 1px solid black;">
+                                            <strong>Estado</strong></td>
+                                        <td style="width: 70%; border-top: 1px solid black">
+                                            <span>Aprobado</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 30%; border-top: 1px solid black; border-right: 1px solid black;">
+                                            <strong>Página</strong></td>
+                                        <td style="width: 70%; border-top: 1px solid black">
+                                            <span class="list-inline-item"><span class="page"/></span>
+                                            <span class="list-inline-item">de</span>
+                                            <span class="list-inline-item"><span class="topage"/></span>
+                                        </td>
+                                    </tr>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                 t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-raw="0"/>
+            </div>
+
+        </template>
+
+
+        <template id="quality_label">
+            <t t-call="web.html_container">
+                <t t-foreach="docs.move_line_nosuggest_ids" t-as="o">
+                    <t t-call="base_epithelium.internal_layout_quality_label">
+                        <div class="page pt-5">
+                            <br/>
+                            <div class="pt-3">
+                                <table class="w-100" style="font-size: 12px;">
+                                    <tr>
+                                        <td class="w-50" style="text-align: right;">
+                                            <div style="margin-right: 7px;">
+                                                <span>ORIGINAL </span><input
+                                                    style="width: 12px; height: 12px; border: 1px solid black; margin-right: 2px;"/>
+                                            </div>
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td class="w-50" style="text-align: left;">
+                                            <div style="margin-left: 7px;">
+                                                <span>RE-PACKAGING </span><input
+                                                    style="width: 12px; height: 12px; border: 1px solid black;"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
+                            <div>
+                                <table class="w-100 text-center" style="font-size: 12px; border: 1px solid black;">
+                                    <tr style="height: 30px">
+                                        <td style="width: 30%; border: 1px solid black;">
+                                            <div class="pt-1">
+                                                <span>DESCRIPTION</span>
+                                            </div>
+                                        </td>
+                                        <td style="width: 70%; border: 1px solid black;">
+                                            <t t-if="o.product_id">
+                                                <span t-field="o.product_id.name"/>
+                                            </t>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 30px">
+                                        <td style="width: 30%; border: 1px solid black;">
+                                            <div class="pt-1">
+                                                <span>PROVIDER</span>
+                                            </div>
+                                        </td>
+                                        <td style="width: 70%; border: 1px solid black;">
+                                            <t t-if="o.picking_id.partner_id">
+                                                <span t-field="o.picking_id.partner_id.name"/>
+                                            </t>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 30%; border: 1px solid black;">
+                                            <span>MANUFACTURER<br/> BATCH NO.</span>
+                                        </td>
+                                        <td style="width: 70%; border: 1px solid black;">
+                                            <div class="pt-1">
+                                                <t t-if="o.lot_id">
+                                                    <span t-field="o.lot_id.name"/>
+                                                </t>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width: 30%; border: 1px solid black;">
+                                            <span>QUANTITY</span>
+                                        </td>
+                                        <td style="width: 70%; border: 1px solid black;">
+                                            <t t-if="o.qty_done"><span t-field="o.qty_done"/> <t t-if="o.product_uom_id">
+                                                <span t-field="o.product_uom_id.name"/>
+                                            </t>
+                                            </t>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width: 30%; border: 1px solid black;">
+                                            <span>INCOME DATE<br/>/ REPACK DATE</span>
+                                        </td>
+                                        <td style="width: 70%; border: 1px solid black;" class="align-center">
+                                            <div class="pt-1">
+                                                <t t-if="o.picking_id.date_done">
+                                                    <span t-field="o.picking_id.date_done"
+                                                          t-options='{"widget": "date"}'/>
+                                                </t>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 30%; border: 1px solid black;">
+                                            <span>D. ANALYSIS</span>
+                                        </td>
+                                        <td style="width: 70%; border: 1px solid black;">
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width: 30%; border: 1px solid black;">
+                                            <span>EXPIRATION DATE</span>
+                                        </td>
+                                        <td style="width: 70%; border: 1px solid black;" class="align-center">
+                                            <t t-if="o.lot_id.use_date">
+                                                <span t-field="o.lot_id.use_date" t-options='{"widget": "date"}'/>
+                                            </t>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+
+                            <div class="pt-1">
+                                <table class="w-100" style="font-size: 12px">
+                                    <tr>
+                                        <td style="width: 33%;">
+                                            <div style="margin: 0 1px 1px; border: 2px solid yellow; height: 80px">
+                                                <span style="color: yellow;">QUARANTINE</span>
+                                            </div>
+                                        </td>
+                                        <td style="width: 33%">
+                                            <div style="margin: 0 1px 1px; border: 2px solid green; height: 80px">
+                                                <span style="color: green;">APPROVED</span>
+                                            </div>
+                                        </td>
+                                        <td style="width: 33%">
+                                            <div style="margin: 0 1px 1px; border: 2px solid red; height: 80px">
+                                                <span style="color: red;">REJECTED</span>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_base_solution_base_solution,base_solution.base_solution,model_base_solution_base_solution,base.group_user,1,1,1,1
+access_pharmaceutical_form_user,base_solution.pharmaceutical.form,model_pharmaceutical_form,base.group_user,1,1,1,1
+access_type_client_user,base_solution.type.client,model_type_client,base.group_user,1,1,1,1

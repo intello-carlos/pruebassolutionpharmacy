@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Paper format  quality label-->
+        <record id="paperformat_quality_label" model="report.paperformat">
+            <field name="name">Quality Laber</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">90</field>
+            <field name="page_width">110</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <!-- Paper format production order -->
+        <record id="paperformat_mrporder" model="report.paperformat">
+            <field name="name">Mrp order epithelium</field>
+            <field name="default" eval="True"/>
+            <field name="format">Letter</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">7</field>
+            <field name="margin_bottom">7</field>
+            <field name="margin_left">10</field>
+            <field name="margin_right">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <!-- Production order report -->
+        <report
+                id="action_report_production_order"
+                model="mrp.production"
+                string="Production Order Ep"
+                report_type="qweb-pdf"
+                name="base_epithelium.report_mrporder_ep"
+                file="base_epithelium.report.mrp_production_templates"
+                print_report_name="'Production Order - %s' % object.name"
+                paperformat="paperformat_mrporder"
+                menu="True"
+        />
+
+        <!-- Production order report -->
+        <report
+                id="action_report_quality_label"
+                model="stock.picking"
+                string="Quality Label"
+                report_type="qweb-pdf"
+                name="base_epithelium.quality_label"
+                file="base_epithelium.report.quality_label_report"
+                print_report_name="'Quality Label - %s' % object.name"
+                paperformat="paperformat_quality_label"
+                menu="True"
+        />
+
+
+    </data>
+</odoo>
